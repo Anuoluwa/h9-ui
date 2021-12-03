@@ -17,6 +17,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import logo from "../../assets/images/h9hlogo.png";
 
 const Links = [];
 
@@ -50,8 +51,9 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box fontSize="2xl" fontWeight="500" color="red.600">House9 
-            Hospitality</Box>
+            <Box fontSize="2xl" fontWeight="500" color="red.600">
+              <img src={logo} alt="H9 Hospitality Logo" width="150" height="556" />
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}
