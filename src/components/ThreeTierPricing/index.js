@@ -23,7 +23,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import bgimg from '../../assets/images/bgimg.jpeg'
+import bgimg from "../../assets/images/bgimg.jpeg";
 
 const ThreeTierPricing = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,7 +37,7 @@ const ThreeTierPricing = () => {
   // };
 
   return (
-    <div >
+    <div>
       <Box py={12}>
         <VStack spacing={2} textAlign="center">
           <Heading as="h1" fontSize="2xl">
@@ -57,7 +57,7 @@ const ThreeTierPricing = () => {
           py={10}
         >
           <PriceWrapper>
-          <Box position="relative">
+            <Box position="relative">
               <Box
                 position="absolute"
                 top="-16px"
@@ -78,15 +78,15 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
-                <Stack justifyContent="center" spacing={0.5} fontWeight="400" >
-                  <Text fontSize="2xl" as='s'>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
                     <span>&#8358;</span>100K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     Pay
                   </Text>
-                  <Text fontSize="2xl"  fontWeight="600" as='em'>
-                  <span>&#8358;</span>90K
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>90K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -99,7 +99,6 @@ const ThreeTierPricing = () => {
                 borderBottomRadius={"xl"}
                 fontSize="sm"
                 fontWeight="380"
-                
               >
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
@@ -125,7 +124,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant='solid'
+                    variant="solid"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>
@@ -157,15 +156,15 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
-                <Stack justifyContent="center" spacing={0.5} fontWeight="400" >
-                  <Text fontSize="2xl" as='s'>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
                     <span>&#8358;</span>500K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     Pay
                   </Text>
-                  <Text fontSize="2xl"  fontWeight="600" as='em'>
-                  <span>&#8358;</span>425K
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>425K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -178,7 +177,6 @@ const ThreeTierPricing = () => {
                 borderBottomRadius={"xl"}
                 fontSize="sm"
                 fontWeight="380"
-                
               >
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
@@ -204,7 +202,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant='solid'
+                    variant="solid"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>
@@ -214,7 +212,7 @@ const ThreeTierPricing = () => {
             </Box>
           </PriceWrapper>
           <PriceWrapper>
-          <Box position="relative">
+            <Box position="relative">
               <Box
                 position="absolute"
                 top="-16px"
@@ -235,15 +233,15 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
-                <Stack justifyContent="center" spacing={0.5} fontWeight="400" >
-                  <Text fontSize="2xl" as='s'>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
                     <span>&#8358;</span>1M
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     Pay
                   </Text>
-                  <Text fontSize="2xl"  fontWeight="600" as='em'>
-                  <span>&#8358;</span>800K
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>800K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -256,7 +254,6 @@ const ThreeTierPricing = () => {
                 borderBottomRadius={"xl"}
                 fontSize="sm"
                 fontWeight="380"
-                
               >
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
@@ -282,7 +279,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant='solid'
+                    variant="solid"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>
