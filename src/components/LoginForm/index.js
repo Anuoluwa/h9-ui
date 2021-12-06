@@ -35,7 +35,7 @@ const LoginForm = (props) => {
         <div className={styles._}>
             <div className={styles.container}>
                 <div className={styles.supplier_logo}>
-                    <h2>House9 Hospitality</h2>
+                    {/* <h2>House9 Hospitality</h2> */}
                     {/* <small>Supplier</small> */}
                 </div>
                 <div className={styles.overall_wrapper}>
