@@ -23,6 +23,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
+import bgimg from "../../assets/images/bgimg.jpeg";
 
 const ThreeTierPricing = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,16 +37,16 @@ const ThreeTierPricing = () => {
   // };
 
   return (
-    <>
+    <div>
       <Box py={12}>
         <VStack spacing={2} textAlign="center">
-          <Heading as="h1" fontSize="4xl">
+          <Heading as="h1" fontSize="2xl">
             Plans that fit your need
           </Heading>
           <Text></Text>
-          <Text fontSize="lg" color={"gray.500"}>
-            Use our Euphoria Gold vouchers in any outlet. <br />{" "}
-            <em>No debit card needed.</em>
+          <Text fontSize="lg" color={"gray.900"}>
+            Use our Euphoria Gold vouchers in any of our outlets. <br />{" "}
+            <em></em>
           </Text>
         </VStack>
         <Stack
@@ -77,30 +78,32 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
+                    <span>&#8358;</span>100K
+                  </Text>
+                  <Text fontSize="md" fontWeight="500" color="gray.500">
+                    Pay
+                  </Text>
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>90K
+                  </Text>
+                </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
-                  Valids for 30 Days
+                  Valid for 30 Days
                 </Text>
-                <HStack justifyContent="center">
-                  <Text fontSize="3xl" fontWeight="600">
-                    <span>&#8358;</span>
-                  </Text>
-                  <Text fontSize="4xl" fontWeight="900">
-                    90K
-                  </Text>
-                  <Text fontSize="3xl" color="gray.500">
-                    /100K
-                  </Text>
-                </HStack>
               </Box>
               <VStack
                 bg={useColorModeValue("gray.50", "gray.700")}
-                py={6}
+                py={4}
                 borderBottomRadius={"xl"}
+                fontSize="sm"
+                fontWeight="380"
               >
-                <List spacing={3} textAlign="start" px={8}>
+                <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
-                    of 100,000 naira for 90,000 naira.
+                    of 100,000 naira for 90,000 naira
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
@@ -118,12 +121,13 @@ const ThreeTierPricing = () => {
                 <Box w="80%" pt={7}>
                   <Button
                     w="full"
-                    colorScheme="red"
-                    variant="outline"
+                    colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
+                    variant="solid"
+                    px={10}
                   >
-                    Select Your Preferred Coupon
+                    <text>Select Your Preferred Coupon</text>
                   </Button>
                 </Box>
               </VStack>
@@ -152,27 +156,29 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
+                    <span>&#8358;</span>500K
+                  </Text>
+                  <Text fontSize="md" fontWeight="500" color="gray.500">
+                    Pay
+                  </Text>
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>425K
+                  </Text>
+                </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
-                  Valids for 60 Days
+                  Valid for 60 Days
                 </Text>
-                <HStack justifyContent="center">
-                  <Text fontSize="3xl" fontWeight="600">
-                    <span>&#8358;</span>
-                  </Text>
-                  <Text fontSize="4xl" fontWeight="900">
-                    425K
-                  </Text>
-                  <Text fontSize="3xl" color="gray.500">
-                    /500K
-                  </Text>
-                </HStack>
               </Box>
               <VStack
                 bg={useColorModeValue("gray.50", "gray.700")}
                 py={4}
                 borderBottomRadius={"xl"}
+                fontSize="sm"
+                fontWeight="380"
               >
-                <List spacing={3} textAlign="start" px={10}>
+                <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 500,000 naira for 425,000 naira
@@ -193,12 +199,13 @@ const ThreeTierPricing = () => {
                 <Box w="80%" pt={7}>
                   <Button
                     w="full"
-                    colorScheme="red"
-                    variant="outline"
+                    colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
+                    variant="solid"
+                    px={10}
                   >
-                    Select Your Preferred Coupon
+                    <text>Select Your Preferred Coupon</text>
                   </Button>
                 </Box>
               </VStack>
@@ -213,7 +220,7 @@ const ThreeTierPricing = () => {
                 style={{ transform: "translate(-50%)" }}
               >
                 <Text
-                  // textTransform="uppercase"
+                  textTransform=""
                   bg={useColorModeValue("yellow.300", "yellow.700")}
                   px={3}
                   py={1}
@@ -226,30 +233,32 @@ const ThreeTierPricing = () => {
                 </Text>
               </Box>
               <Box py={4} px={12}>
+                <Stack justifyContent="center" spacing={0.5} fontWeight="400">
+                  <Text fontSize="2xl" as="s">
+                    <span>&#8358;</span>1M
+                  </Text>
+                  <Text fontSize="md" fontWeight="500" color="gray.500">
+                    Pay
+                  </Text>
+                  <Text fontSize="2xl" fontWeight="600" as="em">
+                    <span>&#8358;</span>800K
+                  </Text>
+                </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
-                  Valids for 90 Days
+                  Valid for 90 Days
                 </Text>
-                <HStack justifyContent="center">
-                  <Text fontSize="3xl" fontWeight="600">
-                    <span>&#8358;</span>
-                  </Text>
-                  <Text fontSize="4xl" fontWeight="900">
-                    800K
-                  </Text>
-                  <Text fontSize="3xl" color="gray.500">
-                    /1M
-                  </Text>
-                </HStack>
               </Box>
               <VStack
                 bg={useColorModeValue("gray.50", "gray.700")}
                 py={4}
                 borderBottomRadius={"xl"}
+                fontSize="sm"
+                fontWeight="380"
               >
-                <List spacing={3} textAlign="start" px={10}>
+                <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
-                    of 1,000,000 naira for 800,000 naira
+                    of 1, 000,000 naira for 800,000 naira
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
@@ -267,12 +276,13 @@ const ThreeTierPricing = () => {
                 <Box w="80%" pt={7}>
                   <Button
                     w="full"
-                    colorScheme="red"
-                    variant="outline"
+                    colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
+                    variant="solid"
+                    px={10}
                   >
-                    Select Your Preferred Coupon
+                    <text>Select Your Preferred Coupon</text>
                   </Button>
                 </Box>
               </VStack>
@@ -297,7 +307,7 @@ const ThreeTierPricing = () => {
           <ModalFooter>{/* <Button >Cancel</Button> */}</ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 };
 
