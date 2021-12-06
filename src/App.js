@@ -2,16 +2,29 @@ import logo from './logo.svg';
 import React, { lazy, Suspense, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import store from './redux/store';
+import PrivateRoute from './route/PrivateRoute';
+import { loadAdmin } from './redux/actions/authActions';
+const Login = lazy(() => import('./pages/login'));
+const Register = lazy(() => import('./pages/register'));
 const Homepage =  lazy(() => import('./pages/homepage'));
 
+
 function App() {
+  useEffect(() => {
+    store.dispatch(loadAdmin())
+  }, [])
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        {/* <Route exact path="/" component={Login}/> */}
-        <Route exact path="/" component={Homepage}/>
-        {/* <Route exact path="/metrics" component={Metrics}/>
-        <Route exact path="/average-metrics" component={AverageMetrics}/> */}
+      <Route exact path="/" component={Homepage}/>
+      <Route exact path="/admin" component={Login}/>
+      <Route exact path="/register" component={Register}/>
+      {/* <PrivateRoute exact path="/dashboard" component={Dashboard}/> */}
+        {/* <PrivateRoute exact path="/products" component={Products}/> */}
+        {/* <PrivateRoute exact path="/orders" component={Orders}/>
+        <PrivateRoute exact path="/account" component={Account}/> */}
       </Switch>
     </Suspense>
   );
