@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PriceWrapper from "../PriceWrapper";
 import { FaCheckCircle } from "react-icons/fa";
 import CreateSubscriptions from "../CreateSubscription";
+import styles from "./index.module.scss";
 import {
   Box,
   Stack,
@@ -40,11 +41,11 @@ const ThreeTierPricing = () => {
     <div>
       <Box py={12}>
         <VStack spacing={2} textAlign="center">
-          <Heading as="h1" fontSize="2xl">
+          <Heading as="h1" fontSize="2xl" >
             Plans that fit your need
           </Heading>
           <Text></Text>
-          <Text fontSize="lg" color={"gray.900"}>
+          <Text fontSize="lg" >
             Use our Euphoria Gold vouchers in any of our outlets. <br />{" "}
             <em></em>
           </Text>
@@ -57,7 +58,13 @@ const ThreeTierPricing = () => {
           py={10}
         >
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+          
+              
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -77,7 +84,7 @@ const ThreeTierPricing = () => {
                   10% Discount
                 </Text>
               </Box>
-              <Box py={4} px={12}>
+              <Box py={4} px={12} bg={useColorModeValue("gray.50", "gray.700")} >
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
                   <Text fontSize="2xl" as="s">
                     <span>&#8358;</span>100K
@@ -124,7 +131,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant="solid"
+                    variant="outline"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>
@@ -135,7 +142,11 @@ const ThreeTierPricing = () => {
           </PriceWrapper>
 
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -212,7 +223,11 @@ const ThreeTierPricing = () => {
             </Box>
           </PriceWrapper>
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -279,7 +294,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant="solid"
+                    variant="outline"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>

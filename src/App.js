@@ -10,7 +10,7 @@ const Register = lazy(() => import("./pages/register"));
 const Homepage = lazy(() => import("./pages/homepage"));
 const Dashboard = lazy(() => import("./pages/dashboard"));
 const Users = lazy(() => import("./pages/users"));
-// const Subscriptions = lazy(() => import("./pages/subcriptions"));
+const Subscriptions = lazy(() => import("./pages/subscriptions"));
 const Vouchers = lazy(() => import("./pages/vouchers"));
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/users" component={Users} />
-        {/* <PrivateRoute exact path="/subscriptions" component={Subscriptions} /> */}
+        <PrivateRoute exact path="/subscriptions" component={Subscriptions} />
         <PrivateRoute exact path="/vouchers" component={Vouchers} />
       </Switch>
     </Suspense>

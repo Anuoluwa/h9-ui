@@ -63,7 +63,6 @@ const VouchersTable = (props) => {
                         <div>Percentage Discount</div>
                         <div>Discounted Price</div>
                         <div>Validity</div>
-                        <div>No of Units</div>
                     </div>
                     <div className={styles.table_body}>
                         {

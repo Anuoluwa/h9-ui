@@ -45,9 +45,9 @@ const VoucherItem = ({ ...product_item }) => {
       <div className={styles.col}>
         <p>{product_item?.validity}</p>
       </div>
-      <div className={styles.col}>
+      {/* <div className={styles.col}>
         <p>{product_item?.estimatedTarget}</p>
-      </div>
+      </div> */}
       {/* <div className={styles.col}>
                 <FiEdit2 className={styles.action_icon} onClick={() => setOpenEditProductModal(true)}/>
                 <RiDeleteBin6Line className={styles.action_icon} onClick={handleDelete}/>

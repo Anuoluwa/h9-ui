@@ -18,7 +18,7 @@ const SideBar = ({ logout }) => {
         <div className={styles.nav_list}>
           <NavLink
             exact={true}
-            to="/dashboard"
+            to="/subscriptions"
             className={styles.nav_item}
             activeClassName={styles.selected}
           >
@@ -26,7 +26,7 @@ const SideBar = ({ logout }) => {
               <AiFillHome className={styles.fill_icon} />
             </div>
             <div className={styles.nav_text}>
-              <p>Dashboard</p>
+              <p>Subscriptions</p>
             </div>
           </NavLink>
           <NavLink
@@ -53,7 +53,7 @@ const SideBar = ({ logout }) => {
               <p>Vouchers</p>
             </div>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/subscriptions"
             className={styles.nav_item}
             activeClassName={styles.selected}
@@ -64,7 +64,7 @@ const SideBar = ({ logout }) => {
             <div className={styles.nav_text}>
               <p>Subscriptions</p>
             </div>
-          </NavLink>
+          </NavLink> */}
           <Link
             className={styles.nav_item}
             activeClassName={styles.selected}

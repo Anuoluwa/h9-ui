@@ -113,6 +113,7 @@ const CreateSubscriptions = ({ handleClose }) => {
           name="voucherId"
           onChange={(event) => setVoucherId(event.target.value)}
           variant="filled"
+          
         >
           {vouchers.map((option) => {
             return (
