@@ -44,18 +44,29 @@ const CreateSubscriptions = ({ handleClose }) => {
         position: "top-right",
       });
       setIsLoading(false);
-    } catch (error) {
+    } catch (err) {
+      toast({
+        title: "Oops!",
+        description: err.response.data.message,
+        status: "info",
+        duration: 10000,
+        isClosable: true,
+        position: "top-right",
+      });
       setError("Invalid, please try again");
       setIsLoading(false);
       setEmail("");
       setName("");
       setVoucherId("");
       setMobile("");
+      console.log(err, 'err')
+      console.log(error, 'error')
     }
 
     handleClose();
     history.push("/");
     // onSubmit(email, name, mobile);
+    console.log(error, '--error--')
   };
 
   useEffect(() => {

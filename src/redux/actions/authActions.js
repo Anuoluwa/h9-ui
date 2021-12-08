@@ -75,7 +75,6 @@ export const login = (email, password) => (dispatch) => {
       });
       dispatch(loadAdmin());
       dispatch(returnSuccess("Logged In Successfully"));
-      console.log(`ress`, res);
     })
     .catch((err) => {
       dispatch({
