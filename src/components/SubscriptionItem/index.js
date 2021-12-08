@@ -59,9 +59,6 @@ const SubscriptionItem = ({updated_subscription_id, ...subscription_item }) => {
         <p>{subscription_item?.balance}</p>
       </div>
       <div className={styles.col}>
-        <p>{subscription_item?.balance}</p>
-      </div>
-      <div className={styles.col}>
                 <FiEdit2 className={styles.action_icon} onClick={() => setOpenEditProductModal(true)}/>
                 {/* <RiDeleteBin6Line className={styles.action_icon} onClick={handleDelete}/> */}
             </div>

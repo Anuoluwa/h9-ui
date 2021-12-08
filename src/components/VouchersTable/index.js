@@ -78,13 +78,13 @@ const VouchersTable = (props) => {
                 </div>
             </div>
             }
-            <div className={styles.add_product}>
+            {/* <div className={styles.add_product}>
                 <PrimaryButton 
                     className={styles.add_product_btn} 
                     onClick={() => setOpenAddProductModal(true)}>
                     <IoMdAdd className={styles.add_icon}/><p>Create Voucher</p>
                 </PrimaryButton>
-            </div>
+            </div> */}
             {/* {
                 openAddProductModal && 
                 <AddProductModal 

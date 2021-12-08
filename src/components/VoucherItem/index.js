@@ -37,7 +37,7 @@ const VoucherItem = ({ ...product_item }) => {
         <p>{product_item?.actualPrice}</p>
       </div>
       <div className={styles.col}>
-        <p>{product_item?.discountPercentage}</p>
+        <p>{product_item?.discountPercentage}% </p>
       </div>
       <div className={styles.col}>
         <p>{product_item?.discountedPrice}</p>

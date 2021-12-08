@@ -15,6 +15,7 @@ const SideBar = ({ logout }) => {
   return (
     <div className={styles._}>
       <div className={styles.container}>
+        <h4>Dashboard</h4>
         <div className={styles.nav_list}>
           <NavLink
             exact={true}

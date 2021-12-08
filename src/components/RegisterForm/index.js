@@ -61,7 +61,7 @@ const RegisterForm = (props) => {
   const { isLoading, isAuthenticated } = props.auth;
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/subscriptions" />;
   }
 
   return (

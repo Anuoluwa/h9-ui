@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/admin" component={Login} />
         <Route exact path="/register" component={Register} />
-        <PrivateRoute exact path="/dashboard" component={Dashboard} />
+        {/* <PrivateRoute exact path="/dashboard" component={Dashboard} /> */}
         <PrivateRoute exact path="/users" component={Users} />
         <PrivateRoute exact path="/subscriptions" component={Subscriptions} />
         <PrivateRoute exact path="/vouchers" component={Vouchers} />
