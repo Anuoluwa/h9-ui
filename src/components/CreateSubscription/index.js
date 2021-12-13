@@ -13,16 +13,27 @@ import {
   Select,
   CircularProgress,
   useToast,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  RadioGroup,
+  Stack,
+  Radio,
 } from "@chakra-ui/react";
 import { listVouchers } from "../../services/vouchers";
 
-const CreateSubscriptions = ({ handleClose }) => {
+const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [voucherId, setVoucherId] = useState("");
   const [mobile, setMobile] = useState("");
+  const [birthMonth, setbirthMonth] = useState([]);
+  const [birthday, setbirthday] = useState([]);
   const [vouchers, setVouchers] = useState([]);
+  const [units, setUnits] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
@@ -32,8 +43,9 @@ const CreateSubscriptions = ({ handleClose }) => {
   const handleSave = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const payload = { email, name, mobile, voucherId };
+    const payload = { email, name, mobile, voucherId, birthMonth, birthday, units };
     try {
+      console.log(payload, 'kiuj');
       await createSubscriptions(payload);
       toast({
         title: "Success!",
@@ -59,14 +71,14 @@ const CreateSubscriptions = ({ handleClose }) => {
       setName("");
       setVoucherId("");
       setMobile("");
-      console.log(err, 'err')
-      console.log(error, 'error')
+      console.log(err, "err");
+      console.log(error, "error");
     }
 
     handleClose();
     history.push("/");
     // onSubmit(email, name, mobile);
-    console.log(error, '--error--')
+    console.log(error, "--error--");
   };
 
   useEffect(() => {
@@ -82,6 +94,11 @@ const CreateSubscriptions = ({ handleClose }) => {
     };
     fetchVouchers();
   }, []);
+
+
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
+
 
   return (
     <form onSubmit={handleSave} my={4}>
@@ -118,13 +135,49 @@ const CreateSubscriptions = ({ handleClose }) => {
       </FormControl>
 
       <FormControl id="dropdown" isRequired mt={6}>
+        <FormLabel>Select Birth Month and Date</FormLabel>
+        <Stack direction="row">
+        <Select
+          placeholder="Select Month"
+          name="voucherId"
+          onChange={(event) => setbirthMonth(event.target.value)}
+          variant="filled"
+        >
+          {months.map((option) => {
+            return (
+              <option
+                value={option}
+              >{`${option}`}</option>
+            );
+          })}
+        </Select>
+
+        <Select
+          placeholder="Select Date"
+          name="voucherId"
+          onChange={(event) => setbirthday(event.target.value)} 
+          variant="filled"
+        >
+          {days.map((option) => {
+            return (
+              <option
+                value={option}
+              >{`${option} `}</option>
+            );
+          })}
+        </Select>
+
+        </Stack>
+        
+      </FormControl>
+
+      {/* <FormControl id="dropdown" isRequired mt={6}>
         <FormLabel>Select voucher</FormLabel>
         <Select
-          placeholder="Select option"
+          placeholder="Select Voucher"
           name="voucherId"
           onChange={(event) => setVoucherId(event.target.value)}
           variant="filled"
-          
         >
           {vouchers.map((option) => {
             return (
@@ -134,6 +187,33 @@ const CreateSubscriptions = ({ handleClose }) => {
             );
           })}
         </Select>
+      </FormControl> */}
+      
+      <FormControl id="dropdown" isRequired mt={6}>
+        <FormLabel>Select voucher</FormLabel>
+        <RadioGroup
+          name="voucherId"
+          onChange={setVoucherId}
+        >
+          <Stack direction="row">
+            {vouchers.map((option) => {
+              return (
+                <Radio value={option._id}><span>&#8358;</span>{`${option.actualPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}</Radio>
+              );
+            })}
+          </Stack>
+        </RadioGroup>
+      </FormControl>
+
+      <FormControl id="amount" mt={6}>
+        <FormLabel>Number of Vouchers</FormLabel>
+        <NumberInput max={100} min={1}>
+          <NumberInputField onChange={(event) => setUnits(event.target.value)}/>
+          <NumberInputStepper>
+            <NumberIncrementStepper />
+            <NumberDecrementStepper />
+          </NumberInputStepper>
+        </NumberInput>
       </FormControl>
       <Button colorScheme="green" mr={3} type="submit" width="full" mt={6}>
         {isLoading ? (

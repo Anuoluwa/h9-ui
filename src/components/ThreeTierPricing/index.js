@@ -81,16 +81,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  10% Discount
+                  <span>&#8358;</span>10, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12} bg={useColorModeValue("gray.50", "gray.700")} >
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>100K
+                  <Text fontSize="2xl" >
+                    Buy <span>&#8358;</span>100K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>90K
@@ -112,10 +112,10 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 100,000 naira for 90,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
@@ -163,16 +163,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  15% Discount
+                   <span>&#8358;</span>75, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>500K
+                  <Text fontSize="2xl" >
+                  Buy <span>&#8358;</span>500K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>425K
@@ -194,10 +194,10 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 500,000 naira for 425,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
@@ -244,16 +244,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  20% Discount
+                  <span>&#8358;</span>200, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>1M
+                  <Text fontSize="2xl" >
+                  Buy <span>&#8358;</span>1M
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>800K
@@ -275,10 +275,10 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 1, 000,000 naira for 800,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
