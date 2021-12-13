@@ -42,6 +42,9 @@ const UserItem = ({ ...user_item }) => {
         <p>{user_item?.email}</p>
       </div>
       <div className={styles.col}>
+        <p>{user_item?.birthMonth + " " + user_item?.birthday}</p>
+      </div>
+      <div className={styles.col}>
         <p>{user_item?.mobile}</p>
       </div>
       {/* <div className={styles.col}>

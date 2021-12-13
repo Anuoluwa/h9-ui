@@ -122,7 +122,7 @@ const ThreeTierPricing = () => {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>
@@ -204,7 +204,7 @@ const ThreeTierPricing = () => {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>
@@ -285,7 +285,7 @@ const ThreeTierPricing = () => {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>

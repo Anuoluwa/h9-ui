@@ -45,7 +45,8 @@ const UsersTable = (props) => {
             <div className={styles.table_head}>
               <div>Full Name</div>
               <div>Email</div>
-              <div className={styles.mobile}>Mobile</div>
+              <div>Birthday</div>
+              <div>Mobile</div>
             </div>
             <div className={styles.table_body}>
               {users.map((user_item) => (
