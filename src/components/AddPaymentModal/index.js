@@ -35,7 +35,7 @@ const AddPaymentModal = ({ setOpenMakePaymentModal, updated_subscription_id }) =
     const handleSubmit = (e) => {
         e.preventDefault()
         if(subscriptionInput.amount){
-            console.log('subscriptionInput.amount', typeof subscriptionInput.amount )
+            // console.log('subscriptionInput.amount', typeof subscriptionInput.amount )
 
             dispatch(makePayment(subscriptionInput.amount, updated_subscription_id))
 

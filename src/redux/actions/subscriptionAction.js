@@ -123,14 +123,13 @@ export const makePayment = (formData, id) => (dispatch, getState) => {
           });
           dispatch(returnSuccess("Payment Updated Successfully"))
           dispatch(loadSubscriptions())
-          console.log('pay-successs', res.data)
       })
       .catch((err) => {
           dispatch({
               type:EDIT_PAYMENT_FAIL
           });
           dispatch(returnError("Error Occured"))
-          console.log('pay-err', err.response);
+          // console.log('pay-err', err.response);
       })
 }
 

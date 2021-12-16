@@ -70,8 +70,6 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
       setName("");
       setVoucherId("");
       setMobile("");
-      console.log(err, "err");
-      console.log(error, "error");
     }
 
     handleClose();
