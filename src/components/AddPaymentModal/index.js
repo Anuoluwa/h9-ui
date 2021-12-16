@@ -4,12 +4,12 @@ import Button, { PrimaryButton } from '../../elements/CustomButton';
 import styles from './index.module.scss';
 import { FormInput} from '../../elements/FormInput';
 import { toast } from 'react-toastify';
-import { editSubscriptions } from '../../redux/actions/subscriptionAction';
+import { makePayment } from '../../redux/actions/subscriptionAction';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
 
-const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) => {
+const AddPaymentModal = ({ setOpenMakePaymentModal, updated_subscription_id }) => {
     const dispatch = useDispatch() 
 
     const {isLoading} = useSelector(state => state.subscription)
@@ -18,7 +18,7 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
     const [closeModal, setCloseModal] = useState(true)
 
     // Form Input Initialization
-    const [subscriptionInput, setSubscriptionInput] = useState({totalAmount:""})
+    const [subscriptionInput, setSubscriptionInput] = useState({amount:""})
 
     const handleChange = (e) => {
         const name = e.target.name
@@ -34,11 +34,13 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(subscriptionInput.totalAmount){
-            dispatch(editSubscriptions(subscriptionInput.totalAmount, updated_subscription_id))
+        if(subscriptionInput.amount){
+            console.log('subscriptionInput.amount', typeof subscriptionInput.amount )
 
-            // Close "add totalAmount" modal after form submission
-            setOpenEditProductModal(false)
+            dispatch(makePayment(subscriptionInput.amount, updated_subscription_id))
+
+            // Close "add amount" modal after form submission
+            setOpenMakePaymentModal(false)
         }else{
             toast.error("Please, fill all details")
         }
@@ -52,21 +54,21 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
                     <div className={styles.cancel_button} 
                         onClick={() => {
                             setCloseModal(false);
-                            setOpenEditProductModal(false);
+                            setOpenMakePaymentModal(false);
                         }}
                         >
                        <GiCancel className={styles.cancel_icon} />
                     </div>
                     <div className={styles.header}>
-                        <h2>Add Expenses</h2>    
+                        <h2>Input Payment Amount</h2>    
                     </div>
                     <form action="">
                         <FormInput 
                             type="text"
-                            label="Expenses"
-                            placeholder="Input customer expenses"
-                            name="totalAmount"
-                            value={subscriptionInput.totalAmount}
+                            label="Payments"
+                            placeholder="Input customer's amount"
+                            name="amount"
+                            value={subscriptionInput.amount}
                             handleChange={handleChange}
                             className={styles.form_input}
                             required
@@ -77,7 +79,7 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
                                 className={styles.cancel_btn} 
                                 onClick={() => {
                                 setCloseModal(false);
-                                setOpenEditProductModal(false);
+                                setOpenMakePaymentModal(false);
                             }}>
                                 Cancel
                             </Button>
@@ -87,7 +89,7 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
                                 className={styles.submit_btn}
                                 type="submit"
                             >
-                                Add Expenses
+                                Submit Amount
                             </PrimaryButton>
                         </div>
                     </form>    
@@ -98,4 +100,4 @@ const AddExpenseModal = ({ setOpenEditProductModal, updated_subscription_id }) =
 }
 
 
-export default AddExpenseModal
+export default AddPaymentModal

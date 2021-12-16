@@ -109,8 +109,6 @@ export const register =
     const body = { email, password, firstName, lastName, mobile };
     console.log(body);
 
-    // console.log(`${api}/auth/signup`)
-
     api
       .post(`/auth/signup`, body, config)
       .then((res) => {

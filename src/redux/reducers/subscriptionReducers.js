@@ -5,12 +5,17 @@ import {
   LOAD_SUBSCRIPTIONS_SUCCESS,
   EDIT_SUBSCRIPTIONS_FAIL,
   EDIT_SUBSCRIPTIONS_SUCCESS,
-  EDIT_SUBSCRIPTIONS_START
+  EDIT_SUBSCRIPTIONS_START,
+  EDIT_PAYMENT_FAIL,
+  EDIT_PAYMENT_SUCCESS,
+  EDIT_PAYMENT_START
+  
 } from "../actions/actionTypes";
 
 const initial_state = {
   subscriptions: [],
   updated_subcription : {},
+  payment_subcription : {},
   isLoading: false,
 };
 
@@ -19,6 +24,7 @@ export default function (state = initial_state, action) {
   switch (action.type) {
     case LOADING_SUBSCRIPTIONS_START:
     case EDIT_SUBSCRIPTIONS_START:
+    case EDIT_PAYMENT_START:
       return {
         ...state,
         isLoading: true,
@@ -35,8 +41,15 @@ export default function (state = initial_state, action) {
         isLoading: false,
         updated_subcription: action.payload.data,
       };
+    case    EDIT_PAYMENT_SUCCESS:
+        return {
+          ...state,
+          isLoading: false,
+          payment_subcription: action.payload.data,
+        };
     case LOAD_SUBSCRIPTIONS_FAIL:
     case EDIT_SUBSCRIPTIONS_FAIL:
+    case EDIT_PAYMENT_FAIL:
       return {
         ...state,
         isLoading: false,

@@ -7,8 +7,12 @@ import {
   EDIT_SUBSCRIPTIONS_START,
   EDIT_SUBSCRIPTIONS_FAIL,
   EDIT_SUBSCRIPTIONS_SUCCESS,
+  EDIT_PAYMENT_START,
+  EDIT_PAYMENT_FAIL,
+  EDIT_PAYMENT_SUCCESS,
 } from "./actionTypes";
 import { returnError, returnSuccess } from "./alertActions";
+import { toast } from "react-toastify";
 
 export const loadSubscriptions = () => (dispatch, getState) => {
   dispatch({
@@ -54,8 +58,6 @@ export const editSubscriptions = (formData, id) => (dispatch, getState) => {
   // Get token from auth state
   const token = getState().auth.token;
 
-  console.log(token)
-
   // config
   const config = {
       headers:{
@@ -68,9 +70,6 @@ export const editSubscriptions = (formData, id) => (dispatch, getState) => {
   }
 
   const body = {"totalAmount": formData}
-
-  console.log("body*****", typeof body)
-  console.log("bid*****", id)
 
 
   api.put(`/subscriptions/${id}/expenses`, body, config)
@@ -91,6 +90,50 @@ export const editSubscriptions = (formData, id) => (dispatch, getState) => {
           console.log(err.response);
       })
 }
+
+
+
+export const makePayment = (formData, id) => (dispatch, getState) => {
+  dispatch({
+      type:EDIT_PAYMENT_START
+  })
+
+  // Get token from auth state
+  const token = getState().auth.token;
+
+  // config
+  const config = {
+      headers:{
+          "Content-Type":"application/json"
+      }
+  }
+
+  if(token){
+      config.headers["Authorization"] = `Bearer ${token}`
+  }
+
+  const body = {"amount": formData}
+
+
+  api.put(`/subscriptions/${id}/payment`, body, config)
+      .then((res) => {
+          dispatch({
+              type:EDIT_PAYMENT_SUCCESS,
+              payload:res.data,
+          });
+          dispatch(returnSuccess("Payment Updated Successfully"))
+          dispatch(loadSubscriptions())
+          console.log('pay-successs', res.data)
+      })
+      .catch((err) => {
+          dispatch({
+              type:EDIT_PAYMENT_FAIL
+          });
+          dispatch(returnError("Error Occured"))
+          console.log('pay-err', err.response);
+      })
+}
+
 
 
 

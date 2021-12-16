@@ -46,13 +46,12 @@ const SubscriptionTable = (props) => {
                 <div className={styles.container}>
                     <div className={styles.table_head}>
                         <div>Name</div>
-                        <div>Email</div>
-                        <div>Mobile</div>
                         <div>Code</div>
                         <div>Voucher Amount</div>
                         <div>Amt Spent</div>
-                        <div>Balance</div>
-                        <div>Action</div>
+                        <div>Amt Paid</div>
+                        <div>Expenses</div>
+                        <div>Payment</div>
                     </div>
                     <div className={styles.table_body}>
                         {

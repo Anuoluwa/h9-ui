@@ -21,8 +21,6 @@ const VouchersTable = (props) => {
     const [openAddProductImageModal, setOpenAddProductImageModal] = useState(false);
 
     const { vouchers, isLoading } = props.voucher
-                               
-    console.log(vouchers, 'vouchers')
 
     // Get total available voucher
     const total_vouchers = vouchers?.length
