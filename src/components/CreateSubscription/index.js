@@ -58,7 +58,7 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
     } catch (err) {
       console.log('err', err)
       toast({
-        title: "Oops!",
+        title: "Oops, please try again!",
         description: err.response.data.message,
         status: "info",
         duration: 10000,
