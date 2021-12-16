@@ -9,7 +9,6 @@ const DropDownVouchers = ({ value, onChange }) => {
   useEffect(() => {
     const fetchVouchers = async () => {
       const data = await listVouchers();
-      console.log(data[0], "0data****");
       setVouchers(
         data.map((voucher) => ({
           ...voucher,

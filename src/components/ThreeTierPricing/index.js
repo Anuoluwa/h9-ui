@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PriceWrapper from "../PriceWrapper";
 import { FaCheckCircle } from "react-icons/fa";
 import CreateSubscriptions from "../CreateSubscription";
+import styles from "./index.module.scss";
 import {
   Box,
   Stack,
@@ -40,11 +41,11 @@ const ThreeTierPricing = () => {
     <div>
       <Box py={12}>
         <VStack spacing={2} textAlign="center">
-          <Heading as="h1" fontSize="2xl">
+          <Heading as="h1" fontSize="2xl" >
             Plans that fit your need
           </Heading>
           <Text></Text>
-          <Text fontSize="lg" color={"gray.900"}>
+          <Text fontSize="lg" >
             Use our Euphoria Gold vouchers in any of our outlets. <br />{" "}
             <em></em>
           </Text>
@@ -57,7 +58,13 @@ const ThreeTierPricing = () => {
           py={10}
         >
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+          
+              
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -74,16 +81,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  10% Discount
+                  <span>&#8358;</span>10, 000 Off
                 </Text>
               </Box>
-              <Box py={4} px={12}>
+              <Box py={4} px={12} bg={useColorModeValue("gray.50", "gray.700")} >
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>100K
+                  <Text fontSize="2xl" >
+                    Buy <span>&#8358;</span>100K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>90K
@@ -105,17 +112,17 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 100,000 naira for 90,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>
@@ -124,7 +131,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant="solid"
+                    variant="outline"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>
@@ -135,7 +142,11 @@ const ThreeTierPricing = () => {
           </PriceWrapper>
 
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -152,16 +163,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  15% Discount
+                   <span>&#8358;</span>75, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>500K
+                  <Text fontSize="2xl" >
+                  Buy <span>&#8358;</span>500K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>425K
@@ -183,17 +194,17 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 500,000 naira for 425,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>
@@ -212,7 +223,11 @@ const ThreeTierPricing = () => {
             </Box>
           </PriceWrapper>
           <PriceWrapper>
-            <Box position="relative">
+            <Box
+              position="relative"
+              bg={useColorModeValue("gray.50", "gray.700")}
+              boxShadow='inner' p='0.5' rounded='md' bg='white'
+            >
               <Box
                 position="absolute"
                 top="-16px"
@@ -229,16 +244,16 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  20% Discount
+                  <span>&#8358;</span>200, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
-                  <Text fontSize="2xl" as="s">
-                    <span>&#8358;</span>1M
+                  <Text fontSize="2xl" >
+                  Buy <span>&#8358;</span>1M
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
-                    Pay
+                    For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
                     <span>&#8358;</span>800K
@@ -260,17 +275,17 @@ const ThreeTierPricing = () => {
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
                     of 1, 000,000 naira for 800,000 naira
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     10% discount for the first 5 hotel bookings.
-                  </ListItem>
+                  </ListItem> */}
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     Free membership access to use the swimming pool.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
-                    Exclusive invite to House9 events.
+                    Exclusive invite to House 9 events.
                   </ListItem>
                 </List>
                 <Box w="80%" pt={7}>
@@ -279,7 +294,7 @@ const ThreeTierPricing = () => {
                     colorScheme="green"
                     fontSize="sm"
                     onClick={onOpen}
-                    variant="solid"
+                    variant="outline"
                     px={10}
                   >
                     <text>Select Your Preferred Coupon</text>

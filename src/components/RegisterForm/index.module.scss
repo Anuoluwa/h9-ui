@@ -1,0 +1,97 @@
+@import '../../styles/global.scss';
+
+._{
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    grid-gap:0 150px;
+    .container{
+        padding-left:50px;
+        // overflow-y: auto;
+        // -ms-overflow-style: none;  /* IE and Edge */
+        // scrollbar-width: none;  /* Firefox */
+        // &::-webkit-scrollbar{
+        //     display: none;   /* Chrome, Safari and Opera */
+        // }
+        .supplier_logo{
+            padding-top:12px;
+            h2{
+                color:$indigo;
+            }
+            small{
+                color:$text-gray;
+                font-size:15px;
+            }
+        }
+        
+        .overall_wrapper{
+            margin-top:5vh;
+            margin-right: 20px;
+            padding-bottom:50px;
+            padding-left:20px;
+            .form_content{
+                display: flex;
+                flex-direction: column;
+                .header{
+                    width:320px;
+                    h2{
+                        color:$black;
+                        // font-size:40px;
+                    }
+                    p{
+                        color:$text-gray
+                    }
+                }
+                .form_wrapper{
+                    margin-top: 30px;
+                    .form_input{
+                       margin-bottom: 30px;
+                       label{
+                           color:$text-gray;
+                       }
+                       input{
+                           border: 1.5px solid $text-gray;
+                           margin-top:4px;
+                       }
+                    }
+                    .register_button{
+                        background-color: $indigo;
+                        color: $pale-purple;
+                        box-shadow: $general-box-shadow;
+                        margin-top:10px;
+                    }
+                    .extras{
+                        text-align: center;
+                        color:$text-gray;
+                        margin-top:30px;
+                        p{
+                            line-height: 1.5em;
+                            &:first-of-type{
+                                span a{
+                                    color:$indigo;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                }
+                            }
+                            &:last-of-type a{
+                                color:$indigo;
+                                font-weight: bold;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register_hero{
+        position: fixed;
+        right: 0;
+        overflow-y: hidden;
+        width:50%;
+        @media (max-width:$break-point-l) {
+            display: none;
+        }
+    }
+    
+}
