@@ -56,6 +56,7 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
       });
       setIsLoading(false);
     } catch (err) {
+      console.log('err', err)
       toast({
         title: "Oops!",
         description: err.response.data.message,
@@ -70,6 +71,10 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
       setName("");
       setVoucherId("");
       setMobile("");
+      setbirthMonth([])
+      setbirthday([])
+      setVouchers([])
+      setUnits("")
     }
 
     handleClose();
