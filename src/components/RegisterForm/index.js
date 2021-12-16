@@ -147,7 +147,7 @@ const RegisterForm = (props) => {
                   <p>
                     Already have an account?{" "}
                     <span>
-                      <NavLink to="/admin">Log In</NavLink>
+                      <NavLink to="/house9/h/login">Log In</NavLink>
                     </span>
                   </p>
                   <p>

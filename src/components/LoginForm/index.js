@@ -72,7 +72,7 @@ const LoginForm = (props) => {
                                     Log In
                             </PrimaryButton>
                             <div className={styles.extras}>
-                                <p>Don't have an account? <span><NavLink to="/register">Sign Up</NavLink></span></p>
+                                <p>Don't have an account? <span><NavLink to="/house9/h/register">Sign Up</NavLink></span></p>
                                 <p><NavLink to="/forgot-password">Forgot Password?</NavLink></p>
                             </div>
                         </div>

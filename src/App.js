@@ -22,8 +22,8 @@ function App() {
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/admin" component={Login} />
-        <Route exact path="/register" component={Register} />
+        <Route exact path="/house9/h/login" component={Login} />
+        <Route exact path="/house9/h/register" component={Register} />
         {/* <PrivateRoute exact path="/dashboard" component={Dashboard} /> */}
         <PrivateRoute exact path="/users" component={Users} />
         <PrivateRoute exact path="/subscriptions" component={Subscriptions} />
