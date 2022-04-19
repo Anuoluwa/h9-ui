@@ -81,19 +81,19 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  <span>&#8358;</span>10, 000 Off
+                  <span>&#8358;</span>3, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12} bg={useColorModeValue("gray.50", "gray.700")} >
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
                   <Text fontSize="2xl" >
-                    Buy <span>&#8358;</span>100K
+                    Buy <span>&#8358;</span>30K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
-                    <span>&#8358;</span>90K
+                    <span>&#8358;</span>28K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -110,7 +110,7 @@ const ThreeTierPricing = () => {
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
-                    of 100,000 naira for 90,000 naira
+                    of 30,000 naira for 28,000 naira
                   </ListItem>
                   {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
@@ -163,19 +163,19 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                   <span>&#8358;</span>75, 000 Off
+                   <span>&#8358;</span>5, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
                   <Text fontSize="2xl" >
-                  Buy <span>&#8358;</span>500K
+                  Buy <span>&#8358;</span>50K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
-                    <span>&#8358;</span>425K
+                    <span>&#8358;</span>45K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -192,7 +192,7 @@ const ThreeTierPricing = () => {
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
-                    of 500,000 naira for 425,000 naira
+                    of 50,000 naira for 45,000 naira
                   </ListItem>
                   {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
@@ -244,19 +244,19 @@ const ThreeTierPricing = () => {
                   fontWeight="600"
                   rounded="xl"
                 >
-                  <span>&#8358;</span>200, 000 Off
+                  <span>&#8358;</span>7, 000 Off
                 </Text>
               </Box>
               <Box py={4} px={12}>
                 <Stack justifyContent="center" spacing={0.5} fontWeight="400">
                   <Text fontSize="2xl" >
-                  Buy <span>&#8358;</span>1M
+                  Buy <span>&#8358;</span>80K
                   </Text>
                   <Text fontSize="md" fontWeight="500" color="gray.500">
                     For
                   </Text>
                   <Text fontSize="2xl" fontWeight="600" as="em">
-                    <span>&#8358;</span>800K
+                    <span>&#8358;</span>73K
                   </Text>
                 </Stack>
                 <Text fontWeight="500" fontSize="sm" color="red.500">
@@ -273,7 +273,7 @@ const ThreeTierPricing = () => {
                 <List spacing={3} textAlign="start" px={5}>
                   <ListItem>
                     <ListIcon as={FaCheckCircle} color="yellow.500" />A voucher
-                    of 1, 000,000 naira for 800,000 naira
+                    of 80,000 naira for 73,000 naira
                   </ListItem>
                   {/* <ListItem>
                     <ListIcon as={FaCheckCircle} color="green.500" />
