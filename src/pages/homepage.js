@@ -9,7 +9,7 @@ const Homepage = () => {
     <Box>
       <MainNav />
       <Box className={styles.bg}>
-        <Container>
+        <Container maxW='container.sm'>
           <ThreeTierPricing />
         </Container>
       </Box>

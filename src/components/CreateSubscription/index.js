@@ -43,7 +43,15 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
   const handleSave = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const payload = { email, name, mobile, voucherId, birthMonth, birthday, units };
+    const payload = {
+      email,
+      name,
+      mobile,
+      voucherId,
+      birthMonth,
+      birthday,
+      units,
+    };
     try {
       await createSubscriptions(payload);
       toast({
@@ -56,7 +64,7 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
       });
       setIsLoading(false);
     } catch (err) {
-      console.log('err', err)
+      console.log("err", err);
       toast({
         title: "Oops, please try again!",
         description: err.response.data.message,
@@ -71,10 +79,10 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
       setName("");
       setVoucherId("");
       setMobile("");
-      setbirthMonth([])
-      setbirthday([])
-      setVouchers([])
-      setUnits("")
+      setbirthMonth([]);
+      setbirthday([]);
+      setVouchers([]);
+      setUnits("");
     }
 
     handleClose();
@@ -95,10 +103,53 @@ const CreateSubscriptions = ({ handleClose, subscriptionValue }) => {
     fetchVouchers();
   }, []);
 
-
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
-
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const days = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+  ];
 
   return (
     <form onSubmit={handleSave} my={4}>
@@ -137,38 +188,28 @@ const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13
       <FormControl id="dropdown" isRequired mt={6}>
         <FormLabel>Select Birth Month and Date</FormLabel>
         <Stack direction="row">
-        <Select
-          placeholder="Select Month"
-          name="voucherId"
-          onChange={(event) => setbirthMonth(event.target.value)}
-          variant="filled"
-        >
-          {months.map((option) => {
-            return (
-              <option
-                value={option}
-              >{`${option}`}</option>
-            );
-          })}
-        </Select>
+          <Select
+            placeholder="Select Month"
+            name="voucherId"
+            onChange={(event) => setbirthMonth(event.target.value)}
+            variant="filled"
+          >
+            {months.map((option) => {
+              return <option value={option}>{`${option}`}</option>;
+            })}
+          </Select>
 
-        <Select
-          placeholder="Select Date"
-          name="voucherId"
-          onChange={(event) => setbirthday(event.target.value)} 
-          variant="filled"
-        >
-          {days.map((option) => {
-            return (
-              <option
-                value={option}
-              >{`${option} `}</option>
-            );
-          })}
-        </Select>
-
+          <Select
+            placeholder="Select Date"
+            name="voucherId"
+            onChange={(event) => setbirthday(event.target.value)}
+            variant="filled"
+          >
+            {days.map((option) => {
+              return <option value={option}>{`${option} `}</option>;
+            })}
+          </Select>
         </Stack>
-        
       </FormControl>
 
       {/* <FormControl id="dropdown" isRequired mt={6}>
@@ -188,17 +229,20 @@ const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13
           })}
         </Select>
       </FormControl> */}
-      
+
       <FormControl id="dropdown" isRequired mt={6}>
         <FormLabel>Select voucher</FormLabel>
-        <RadioGroup
-          name="voucherId"
-          onChange={setVoucherId}
-        >
-          <Stack direction="row">
+        <RadioGroup name="voucherId" onChange={setVoucherId}>
+          <Stack direction="column">
             {vouchers.map((option) => {
               return (
-                <Radio value={option._id}><span>&#8358;</span>{`${option.actualPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}</Radio>
+                <Radio value={option._id}>
+                  <span>&#8358;</span>
+                  {`${option.actualPrice.replace(
+                    /\B(?=(\d{3})+(?!\d))/g,
+                    ","
+                  )}`}
+                </Radio>
               );
             })}
           </Stack>
@@ -208,7 +252,9 @@ const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13
       <FormControl id="amount" mt={6}>
         <FormLabel>Number of Vouchers</FormLabel>
         <NumberInput max={100} min={1}>
-          <NumberInputField onChange={(event) => setUnits(event.target.value)}/>
+          <NumberInputField
+            onChange={(event) => setUnits(event.target.value)}
+          />
           <NumberInputStepper>
             <NumberIncrementStepper />
             <NumberDecrementStepper />
